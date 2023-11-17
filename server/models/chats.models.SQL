@@ -1,0 +1,8 @@
+CREATE TABLE chats (
+    id SERIAL PRIMARY KEY,
+    created_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
+    summary TEXT,
+    user_id INT REFERENCES users(user_id)
+  );
+  
